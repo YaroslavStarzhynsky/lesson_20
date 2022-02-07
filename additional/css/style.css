@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.container_left{
+    grid-area: bg-white;
+    background-color: white;
+    padding:30px;
+}
+.container_blue{
+    grid-area: bg-blue;
+    background-color: #3a359c;
+    padding:30px;
+    color:white;
+}
+.container_green{
+    grid-area: bg-green;
+    background-color: #10ca8c;
+    padding:30px;
+    color:white;
+}
+.container_yellow{
+    grid-area: bg-yellow;
+    background-color: #f3bc08;
+    padding:30px;
+    color:white;}
+.container_red{
+    grid-area: bg-red;
+    background-color: #fa4747;
+    padding:30px;
+    color:white;
+}
+.container{
+    display:grid;
+    grid-template-areas: 
+    "bg-white bg-white bg-blue bg-green"
+    "bg-white bg-white bg-blue bg-yellow"
+    "bg-white bg-white bg-red bg-red";
+    grid-template-columns: repeat(4, 1fr);
+}
+img{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    border:2px solid white;
+    border-radius: 50%;
+}
+h1{
+    margin-top: 150px;
+    font-weight: 800;
+}
+.container_left{
+    padding:30px;
+}
+li{
+    list-style-type: none;
+}
+.button-2 {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-family: monospace;
+    font-size: 12pt;
+    color: #232323;
+    margin-left: 13vw;
+    margin-top:30px;
+}
+.button-2 span {
+    position: relative;
+}
+.button-2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: #C4F1FF;
+    transition: .3s ease-in-out;
+}
+.button-2:hover:before {
+    width: 250px;
+}
+ul{
+    margin-top: 50px;
+}
+.container{
+    display:grid;
+    grid-template-areas:
+    "bg-white bg-white bg-blue bg-green"
+    "bg-white bg-white bg-blue bg-yellow"
+    "bg-white bg-white bg-red bg-red";
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+}
+@media screen and (max-width:720px){
+    .container{
+        display:flex;
+        flex-direction:column;
+    }
+}
